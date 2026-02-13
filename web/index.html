@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PratikKun | Portfolio</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYdCZhbVNuoVDpKYkx1pDRQey7spXdqk9Oxg&s">
+    <meta name="description" content="Portfolio of PratikKun - Developer, Animator, and Open Source Enthusiast.">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gh: {
+                            bg: '#0d1117',
+                            card: '#161b22',
+                            border: '#30363d',
+                            text: '#c9d1d9',
+                            muted: '#8b949e',
+                            link: '#58a6ff',
+                            btn: '#21262d',
+                            btnHover: '#30363d',
+                            green: '#238636',
+                            accent: '#f78166',
+                            purple: '#a371f7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.3s ease-out forwards',
+                    },
+                    keyframes: {
+                        slideUp: {
+                            '0%': { transform: 'translateY(15px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gh-bg text-gh-text font-sans antialiased selection:bg-gh-link selection:text-white overflow-x-hidden">
+
+    <!-- Floating Navbar -->
+    <div class="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 animate-slide-up">
+        <nav class="bg-gh-card/90 backdrop-blur-md border-2 border-gh-border rounded-full px-6 py-2.5 shadow-xl flex items-center gap-8 hover:border-gh-muted transition-colors duration-200">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="bg-gh-text text-gh-bg rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm shadow-md group-hover:scale-105 transition-transform duration-200">PK</div>
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-bold text-gh-muted">
+                <a href="#profile" class="hover:text-white transition-colors duration-200">Profile</a>
+                <a href="#skills" class="hover:text-white transition-colors duration-200">Arsenal</a>
+                <a href="#projects" class="hover:text-white transition-colors duration-200">Repos</a>
+                <a href="#contact" class="hover:text-white transition-colors duration-200">Contact</a>
+            </div>
+            <a href="https://github.com/PratikKun" target="_blank" class="text-gh-text hover:text-white hover:scale-110 transition-transform duration-200">
+                <i class="fab fa-github text-xl"></i>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-28 space-y-20">
+
+        <!-- 1. Profile Hero -->
+        <section id="profile" class="animate-slide-up" style="animation-delay: 0.1s;">
+            <div class="bg-gh-card border-2 border-gh-border rounded-2xl p-8 relative overflow-hidden group shadow-lg">
+                <!-- Static Background Accent -->
+                <div class="absolute -top-32 -right-32 w-64 h-64 bg-gh-link/10 rounded-full blur-[80px]"></div>
+
+                <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    <!-- Avatar -->
+                    <div class="relative flex-shrink-0">
+                        <div class="w-32 h-32 md:w-44 md:h-44 rounded-full p-1 bg-gh-border shadow-xl">
+                            <img id="profile-avatar" src="assets/images/default_avatar.png" onerror="this.src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'"
+                                 alt="Avatar" class="w-full h-full rounded-full object-cover border-2 border-gh-bg bg-gh-bg">
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-gh-card border-2 border-gh-border text-gh-text text-xs font-bold px-2 py-1 rounded-full shadow-md flex items-center gap-2">
+                            <span class="w-2 h-2 bg-gh-green rounded-full"></span> 
+                            <span>Online</span>
+                        </div>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="flex-grow text-center md:text-left space-y-4">
+                        <div>
+                            <h1 id="profile-name" class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">Loading...</h1>
+                            <a href="https://github.com/PratikKun" target="_blank" id="profile-login" class="text-gh-link font-mono text-lg hover:underline underline-offset-4">@...</a>
+                        </div>
+                        
+                        <div id="profile-bio" class="text-gh-text text-lg max-w-2xl leading-relaxed font-medium">
+                            Fetching GitHub profile data...
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="inline-flex flex-wrap justify-center md:justify-start items-center gap-6 bg-gh-bg border-2 border-gh-border rounded-xl px-6 py-3 mt-2">
+                            <div class="text-center">
+                                <span id="profile-followers" class="font-bold text-white block text-lg">0</span>
+                                <span class="text-xs uppercase tracking-wider text-gh-muted font-bold">Followers</span>
+                            </div>
+                            <div class="w-0.5 h-8 bg-gh-border hidden md:block"></div>
+                            <div class="text-center">
+                                <span id="profile-following" class="font-bold text-white block text-lg">0</span>
+                                <span class="text-xs uppercase tracking-wider text-gh-muted font-bold">Following</span>
+                            </div>
+                            <div class="w-0.5 h-8 bg-gh-border hidden md:block"></div>
+                            <div class="text-center">
+                                <span id="public-repos-badge" class="font-bold text-white block text-lg">0</span>
+                                <span class="text-xs uppercase tracking-wider text-gh-muted font-bold">Repos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Skills Arsenal (Categorized) -->
+        <section id="skills" class="space-y-8 animate-slide-up" style="animation-delay: 0.2s;">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b-2 border-gh-border pb-4 gap-4">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="bg-gh-btn w-10 h-10 rounded-lg flex items-center justify-center border-2 border-gh-border">
+                        <i class="fas fa-microchip text-gh-accent text-lg"></i>
+                    </span>
+                    Arsenal
+                </h2>
+                <span id="skill-status" class="text-xs font-bold bg-gh-green/10 text-gh-green px-3 py-1 rounded-full border border-gh-green/20">
+                    <i class="fas fa-sync fa-spin mr-1" id="skill-spinner"></i> Loading Data...
+                </span>
+            </div>
+            
+            <!-- Skill Categories Grid -->
+            <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Categories injected here -->
+            </div>
+        </section>
+
+        <!-- 3. Projects Dashboard -->
+        <section id="projects" class="space-y-8 animate-slide-up" style="animation-delay: 0.3s;">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b-2 border-gh-border pb-4">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="bg-gh-btn w-10 h-10 rounded-lg flex items-center justify-center border-2 border-gh-border">
+                        <i class="fas fa-terminal text-gh-link text-lg"></i>
+                    </span>
+                    Repositories
+                </h2>
+                
+                <!-- Search Input -->
+                <div class="relative w-full md:w-72">
+                    <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gh-muted"></i>
+                    <input type="text" id="repo-search" placeholder="Search repositories..." 
+                           class="w-full bg-gh-bg border-2 border-gh-border rounded-xl py-2.5 pl-10 pr-4 text-sm font-medium text-white focus:border-gh-link focus:outline-none transition-colors duration-200 placeholder:text-gh-muted/70">
+                </div>
+            </div>
+
+            <div id="repo-grid" class="grid md:grid-cols-2 gap-6">
+                <!-- Repos injected by JS -->
+            </div>
+        </section>
+
+        <!-- 4. Contact Section -->
+        <section id="contact" class="animate-slide-up" style="animation-delay: 0.4s;">
+            <div class="bg-gh-card border-2 border-gh-border rounded-2xl p-8 md:p-10 text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Let's Connect</h2>
+                <p class="text-gh-text max-w-xl mx-auto mb-8 font-medium">
+                    Whether you have a question about low-level programming, want to discuss game mechanics, or just want to say hi, my inbox is open.
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="mailto:pratik773915@gmail.com" class="bg-gh-btn hover:bg-gh-btnHover border-2 border-gh-border text-white px-6 py-3 rounded-xl font-bold transition-all duration-200 hover:-translate-y-1 flex items-center gap-2">
+                        <i class="fas fa-envelope text-red-400"></i> Email Me
+                    </a>
+                    <a href="https://discord.com/users/pratik__kun" target="_blank" class="bg-[#5865F2] hover:bg-[#4752C4] border-2 border-transparent text-white px-6 py-3 rounded-xl font-bold transition-all duration-200 hover:-translate-y-1 flex items-center gap-2 shadow-lg shadow-[#5865F2]/20">
+                        <i class="fab fa-discord"></i> Discord
+                    </a>
+                    <a href="https://github.com/PratikKun" target="_blank" class="bg-gh-bg hover:bg-gh-btn border-2 border-gh-border text-white px-6 py-3 rounded-xl font-bold transition-all duration-200 hover:-translate-y-1 flex items-center gap-2">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-gh-border bg-gh-card mt-20">
+        <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <span class="font-bold text-white text-lg">PratikKun</span>
+                <span class="text-gh-muted text-sm ml-2">Open XS (Opening Everything)</span>
+            </div>
+            <div class="text-gh-muted text-sm font-medium">
+                Built with <i class="fas fa-heart text-red-500 mx-1"></i> and Code
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
