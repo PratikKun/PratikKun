@@ -1,0 +1,14 @@
+[
+  language-skills-over-view{
+    C, C#, C++, Python, JavaScript, BrainFuck, Java, ASM, XML, Ruby, Rust.
+  },
+  application-mastery{
+    VSCodium, Unity, Godot, Unreal-Engine, Blender, SubstancePainter, Krita, Cinema4D, Zbrush, GIT.
+  }
+  sdk-mastery{
+    flutter, react, node.js, sdl, android-platform, windows Win32 API, LinuxKernal, OpenGL, Vulkan.
+  },
+  callable-skills{
+    Web, Application, Game, Server Management, Backend, Logic Builder, Interaction With Hardware With Software.
+  }
+]
