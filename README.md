@@ -3,7 +3,7 @@
 # Hi there, I'm Pratik! 👋
 ### 開発者 (Developer) | アニメーター (Animator)
 
-*Building worlds in Unity/Godot & dreaming of Tokyo 🇯🇵*
+*Learning....*
 
 ---
 
@@ -15,10 +15,10 @@
 
 ## 👨‍💻 About Me
 - 🔭 **Current Project:** Building a **Visual Script Builder** in Python.
-- 🌱 **Learning:** `Flutter`, `C++`, `C#`, `C`, `React` & `Linux`.
+- 🌱 **Learning:** `Flutter`, `C++`.
+- 💾 **Plan To Learn:** `GPU Programming`, `System Level Programming`, `Backend, Compilers`.
 - 👯 **Looking to Collaborate:** Open source **Game Dev** projects (Unity, Godot, SDL3).
 - 💬 **Ask Me About:** Anime recommendations, Game Mechanics, or Linux distros.
-- ⚡ **Fun Fact:** My ultimate goal is to work in **Japan** as a developer & animator!
 
 ## 🛠️ My Tech Stack
 | Domain | Technologies |
